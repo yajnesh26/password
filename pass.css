@@ -41,17 +41,15 @@ body{
 
 .display input{
     border: 0;
-    outline: 0;
     font-size: 24px;
 }
-.container button img{
+.container > button img{
     width: 28px;
     margin-right: 10px;
 }
-.container button {
+.container > button {
     border: 0;
-    outline: 0;
-    background: #019f55;
+    background: #0f7d47;
     color: #fff;
     font-size: 22px;
     font-weight: 300;
@@ -61,4 +59,22 @@ body{
     padding: 16px 26px;
     border-radius: 5px; 
     cursor: pointer;
+}
+.copy-btn {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+.copy-btn:focus-visible,
+.display input:focus-visible {
+    outline: 3px solid #019f55;
+    outline-offset: 2px;
+}
+.container > button:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
 }

@@ -29,7 +29,23 @@ function createPassword() {
 
 function copyPassword() {
     passwordBox.select();
-    navigator.clipboard.writeText(passwordBox.value)
-        .then(() => alert("Password copied to clipboard"))
-        .catch(err => console.error("Failed to copy:", err));
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(passwordBox.value)
+            .then(() => alert("Password copied to clipboard"))
+            .catch(err => {
+                console.error("Failed to copy:", err);
+                alert("Failed to copy password to clipboard");
+            });
+        return;
+    }
+    try {
+        if (document.execCommand("copy")) {
+            alert("Password copied to clipboard");
+        } else {
+            alert("Failed to copy password to clipboard");
+        }
+    } catch (err) {
+        console.error("Failed to copy:", err);
+        alert("Failed to copy password to clipboard");
+    }
 }

@@ -20,11 +20,20 @@ function getRandomIndex(max) {
 }
 
 function createPassword() {
-    let password = "";
+    const password = [
+        upperCase[getRandomIndex(upperCase.length)],
+        lowerCase[getRandomIndex(lowerCase.length)],
+        number[getRandomIndex(number.length)],
+        symbol[getRandomIndex(symbol.length)]
+    ];
     while (password.length < length) {
-        password += allChars[getRandomIndex(allChars.length)];
+        password.push(allChars[getRandomIndex(allChars.length)]);
     }
-    passwordBox.value = password;
+    for (let i = password.length - 1; i > 0; i--) {
+        const j = getRandomIndex(i + 1);
+        [password[i], password[j]] = [password[j], password[i]];
+    }
+    passwordBox.value = password.join("");
 }
 
 function copyPassword() {

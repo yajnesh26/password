@@ -8,10 +8,21 @@ const symbol = "@#$%^&*()_+~|{}[]<>/-=?";
 
 const allChars = upperCase + lowerCase + number + symbol;
 
+function getRandomIndex(max) {
+    const buffer = new Uint32Array(1);
+    const limit = Math.floor(0x100000000 / max) * max;
+    let value;
+    do {
+        crypto.getRandomValues(buffer);
+        value = buffer[0];
+    } while (value >= limit);
+    return value % max;
+}
+
 function createPassword() {
     let password = "";
     while (password.length < length) {
-        password += allChars[Math.floor(Math.random() * allChars.length)];
+        password += allChars[getRandomIndex(allChars.length)];
     }
     passwordBox.value = password;
 }

@@ -11,14 +11,15 @@
 * [x] E3 — Clipboard auto-clear
 * [x] F3 — Empty-input guard
 * [x] F5 — Fix mobile horizontal overflow
+* [x] Remove unused/unloaded Poppins font
 
 ## Next Fix
 
-* [ ] Remove unused/unloaded Poppins font
+* [ ] Add README.md
 
 ## Remaining Issues
 
-* [ ] Add README.md
+* [ ] Add `.gitignore`
 * [ ] Add `.gitignore`
 * [ ] Add LICENSE
 * [ ] Improve error/feedback UI
@@ -45,10 +46,10 @@ Never combine multiple unrelated fixes into one change.
 
 ## Current Status
 
-Completed through **F5 — Fix mobile horizontal overflow**.
+Completed through **Remove unused/unloaded Poppins font**.
 
 The next issue to work on is:
 
-**Remove unused/unloaded Poppins font.**
+**Add README.md.**
 
 Do not automatically proceed to the next issue after completing a fix.

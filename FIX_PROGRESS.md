@@ -8,15 +8,15 @@
 * [x] F4 — Make copy button keyboard accessible
 * [x] Accessibility — Restore visible focus indicators
 * [x] Accessibility — Fix button color contrast
+* [x] E3 — Clipboard auto-clear
+* [x] F3 — Empty-input guard
 
 ## Next Fix
 
-* [ ] E3 — Clipboard auto-clear
-* [ ] F3 — Empty-input guard
+* [ ] F5 — Fix mobile horizontal overflow
 
 ## Remaining Issues
 
-* [ ] F5 — Fix mobile horizontal overflow
 * [ ] Remove unused/unloaded Poppins font
 * [ ] Add README.md
 * [ ] Add `.gitignore`
@@ -45,10 +45,10 @@ Never combine multiple unrelated fixes into one change.
 
 ## Current Status
 
-Completed through **#4 — F4 + accessibility fixes**.
+Completed through **#5 — E3 + F3: Clipboard auto-clear and empty-input handling**.
 
 The next issue to work on is:
 
-**#5 — E3 + F3: Clipboard auto-clear and empty-input handling.**
+**F5 — Fix mobile horizontal overflow.**
 
 Do not automatically proceed to the next issue after completing a fix.

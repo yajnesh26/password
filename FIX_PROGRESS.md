@@ -12,15 +12,14 @@
 * [x] F3 — Empty-input guard
 * [x] F5 — Fix mobile horizontal overflow
 * [x] Remove unused/unloaded Poppins font
+* [x] Add README.md
 
 ## Next Fix
 
-* [ ] Add README.md
+* [ ] Add `.gitignore`
 
 ## Remaining Issues
 
-* [ ] Add `.gitignore`
-* [ ] Add `.gitignore`
 * [ ] Add LICENSE
 * [ ] Improve error/feedback UI
 * [ ] Address remaining global/inline-handler code-quality issues
@@ -46,10 +45,10 @@ Never combine multiple unrelated fixes into one change.
 
 ## Current Status
 
-Completed through **Remove unused/unloaded Poppins font**.
+Completed through **Add README.md**.
 
 The next issue to work on is:
 
-**Add README.md.**
+**Add `.gitignore`.**
 
 Do not automatically proceed to the next issue after completing a fix.

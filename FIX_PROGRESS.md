@@ -16,14 +16,14 @@
 * [x] Add `.gitignore`
 * [x] Add LICENSE
 * [x] Improve error/feedback UI
+* [x] Address remaining global/inline-handler code-quality issues
 
 ## Next Fix
 
-* [ ] Address remaining global/inline-handler code-quality issues
+* [ ] Consider configurable password length
 
 ## Remaining Issues
 
-* [ ] Consider configurable password length
 * [ ] Consider removing ambiguous characters (O/0/l/1)
 * [ ] Add appropriate tests
 
@@ -45,10 +45,10 @@ Never combine multiple unrelated fixes into one change.
 
 ## Current Status
 
-Completed through **Improve error/feedback UI**.
+Completed through **Address remaining global/inline-handler code-quality issues**.
 
 The next issue to work on is:
 
-**Address remaining global/inline-handler code-quality issues.**
+**Consider configurable password length.**
 
 Do not automatically proceed to the next issue after completing a fix.

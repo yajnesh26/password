@@ -6,6 +6,7 @@ A lightweight, dependency-free password generator that runs entirely in the brow
 
 - Generates a password of a **configurable length** (4–64 characters, default 12) combining upper- and lowercase letters, digits, and symbols.
 - Guarantees **at least one character from every category** (uppercase, lowercase, number, symbol).
+- Omits visually **ambiguous characters** (`O`, `0`, `l`, `1`) for easier human reading.
 - Uses the **Web Crypto API** (`crypto.getRandomValues()`) for randomness—not `Math.random()`.
 - One-click **copy to clipboard** with an automatic 30-second clipboard clear.
 - Empty-input **guard**: the copy button stays disabled until a password is generated.
@@ -22,12 +23,12 @@ A lightweight, dependency-free password generator that runs entirely in the brow
 
 Character pools (from `pass.js`):
 
-- Uppercase: `ABCDEFGHIJKLMNOPQRSTUVWXYZ`
-- Lowercase: `abcdefghijklmnopqrstuvwxyz`
-- Numbers: `0123456789`
+- Uppercase: `ABCDEFGHIJKLMNPQRSTUVWXYZ`
+- Lowercase: `abcdefghijkmnopqrstuvwxyz`
+- Numbers: `23456789`
 - Symbols: `@#$%^&*()_+~|{}[]<>/-=?`
 
-The full pool is **85 characters**, so the default 12-character password has roughly **77 bits** of entropy (about 6.4 bits per character). The password is never transmitted anywhere or stored (no `localStorage`, no backend).
+The full pool is **81 characters** (the visually ambiguous `O`, `0`, `l`, and `1` are omitted), so the default 12-character password has roughly **76 bits** of entropy (about 6.3 bits per character). The password is never transmitted anywhere or stored (no `localStorage`, no backend).
 
 ### Randomness details
 
@@ -106,7 +107,6 @@ then open `http://localhost:8000`.
 
 Some known limitations and planned work:
 
-- Option to **exclude ambiguous characters** (e.g., `O`, `0`, `l`, `1`).
 - Add automated tests.
 
 ## License

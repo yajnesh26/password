@@ -11,9 +11,9 @@
     let clipboardClearTimer = null;
     let feedbackHideTimer = null;
 
-    const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const lowerCase = "abcdefghijklmnopqrstuvwxyz";
-    const digits = "0123456789";
+    const upperCase = "ABCDEFGHIJKLMNPQRSTUVWXYZ";
+    const lowerCase = "abcdefghijkmnopqrstuvwxyz";
+    const digits = "23456789";
     const symbol = "@#$%^&*()_+~|{}[]<>/-=?";
 
     const allChars = upperCase + lowerCase + digits + symbol;

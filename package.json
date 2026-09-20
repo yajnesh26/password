@@ -1,0 +1,9 @@
+{
+  "name": "random-password-generator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A dependency-free, browser-based cryptographically secure password generator.",
+  "scripts": {
+    "test": "node --test test/password.test.js"
+  }
+}

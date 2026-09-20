@@ -19,14 +19,17 @@
 * [x] Address remaining global/inline-handler code-quality issues
 * [x] Consider configurable password length
 * [x] Consider removing ambiguous characters (O/0/l/1)
+* [x] Add appropriate tests
+
+Test command: `npm test` (or `node --test test/password.test.js`) — 21 tests, Node's built-in runner, no dependencies.
 
 ## Next Fix
 
-* [ ] Add appropriate tests
+* [ ] (none — all requested issues addressed)
 
 ## Remaining Issues
 
-* [ ] (none — all identified items addressed)
+* [ ] (none)
 
 ## Workflow
 
@@ -46,10 +49,8 @@ Never combine multiple unrelated fixes into one change.
 
 ## Current Status
 
-Completed through **Removing ambiguous characters (O/0/l/1)**.
+Completed through **Add appropriate tests**.
 
-The next issue to work on is:
-
-**Add appropriate tests.**
+All requested issues have been addressed. No further tasks remain; wait for review/commit before any new work.
 
 Do not automatically proceed to the next issue after completing a fix.

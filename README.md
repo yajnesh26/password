@@ -69,6 +69,9 @@ password/
 ├── index.html    # Page markup and controls
 ├── pass.css      # Styling, layout, focus and responsive rules
 ├── pass.js       # Password generation, randomness, clipboard logic
+├── package.json  # Test script (no dependencies)
+├── test/
+│   └── password.test.js  # Automated test suite (Node's built-in runner)
 └── images/
     ├── copy.png      # Copy button icon
     └── generate.png  # Generate button icon
@@ -95,6 +98,30 @@ npx serve .
 
 then open `http://localhost:8000`.
 
+## Testing
+
+The test suite uses **Node's built-in test runner** (`node:test`) — no framework, no browser, and no dependencies are required. `pass.js` is executed inside an isolated `vm` context with a small in-memory DOM/Clipboard/Crypto stub, so tests are deterministic and do not touch the real system clipboard or call `Math.random()`.
+
+Requires Node.js 20 or newer:
+
+```bash
+npm test
+```
+
+or, if you do not want to use npm:
+
+```bash
+node --test test/password.test.js
+```
+
+The suite covers:
+
+- Password generation: default/min/max length, requested length, category guarantee, 81-character pool membership, and exclusion of the ambiguous characters `O`, `0`, `l`, and `1`.
+- Invalid-length handling: empty, non-integer, below-minimum, and above-maximum inputs never generate or overwrite a valid password.
+- Randomness: `crypto.getRandomValues()` is used, `Math.random()` is never used, and rejection sampling redraws when a value falls into the rejected range.
+- Clipboard behavior: success, rejection, `document.execCommand` fallback (including its failure modes), empty-password copy attempts, and the disabled/enabled copy-button state.
+- Feedback UI: success, failure, and empty-input messages, plus the auto-hide after the configured delay.
+
 ## Security considerations
 
 - Randomness comes from the **cryptographic** generator `crypto.getRandomValues()`, never `Math.random()`.
@@ -107,7 +134,7 @@ then open `http://localhost:8000`.
 
 Some known limitations and planned work:
 
-- Add automated tests.
+- (none)
 
 ## License
 

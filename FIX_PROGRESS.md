@@ -13,14 +13,15 @@
 * [x] F5 — Fix mobile horizontal overflow
 * [x] Remove unused/unloaded Poppins font
 * [x] Add README.md
+* [x] Add `.gitignore`
 
 ## Next Fix
 
-* [ ] Add `.gitignore`
+* [ ] Add LICENSE
 
 ## Remaining Issues
 
-* [ ] Add LICENSE
+* [ ] Improve error/feedback UI
 * [ ] Improve error/feedback UI
 * [ ] Address remaining global/inline-handler code-quality issues
 * [ ] Consider configurable password length
@@ -45,10 +46,10 @@ Never combine multiple unrelated fixes into one change.
 
 ## Current Status
 
-Completed through **Add README.md**.
+Completed through **Add `.gitignore`**.
 
 The next issue to work on is:
 
-**Add `.gitignore`.**
+**Add LICENSE.**
 
 Do not automatically proceed to the next issue after completing a fix.

@@ -15,14 +15,14 @@
 * [x] Add README.md
 * [x] Add `.gitignore`
 * [x] Add LICENSE
+* [x] Improve error/feedback UI
 
 ## Next Fix
 
-* [ ] Improve error/feedback UI
+* [ ] Address remaining global/inline-handler code-quality issues
 
 ## Remaining Issues
 
-* [ ] Address remaining global/inline-handler code-quality issues
 * [ ] Consider configurable password length
 * [ ] Consider removing ambiguous characters (O/0/l/1)
 * [ ] Add appropriate tests
@@ -45,10 +45,10 @@ Never combine multiple unrelated fixes into one change.
 
 ## Current Status
 
-Completed through **Add LICENSE**.
+Completed through **Improve error/feedback UI**.
 
 The next issue to work on is:
 
-**Improve error/feedback UI.**
+**Address remaining global/inline-handler code-quality issues.**
 
 Do not automatically proceed to the next issue after completing a fix.

@@ -37,7 +37,7 @@ The full pool is **85 characters**, giving a genuinely random 12-character passw
 
 - Priority path: **`navigator.clipboard.writeText()`** (the modern async Clipboard API, available in secure contexts such as HTTPS, `localhost`, or a locally opened `file://` page).
 - Fallback: **`document.execCommand("copy")`** for older browsers where the async API is unavailable.
-- Success and failure are reported to the user (native alert on success/failure).
+- Success and failure are reported to the user via a non-blocking, in-page feedback message (a screen-reader-announced live region).
 - **Auto-clear:** 30 seconds after copying, the clipboard is clearedâ€”unless it was already replaced by different content (checked via a best-effort `readText()`). Note that auto-clear uses the async Clipboard API and therefore does not apply to the legacy `execCommand` fallback path.
 - The copy button is disabled until a password exists, and `copyPassword()` refuses to copy an empty field.
 
@@ -108,7 +108,6 @@ Some known limitations and planned work:
 
 - Configurable password **length** (currently fixed at 12).
 - Option to **exclude ambiguous characters** (e.g., `O`, `0`, `l`, `1`).
-- Replace native alerts with a more polished feedback UI.
 - Add automated tests.
 
 ## License

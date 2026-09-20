@@ -1,9 +1,11 @@
 const passwordBox = document.getElementById("password");
 const copyButton = document.getElementById("copy-btn");
+const feedbackEl = document.getElementById("feedback");
 const length = 12;
 const CLIPBOARD_CLEAR_DELAY_MS = 30000;
 
 let clipboardClearTimer = null;
+let feedbackHideTimer = null;
 
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerCase = "abcdefghijklmnopqrstuvwxyz";
@@ -43,7 +45,7 @@ function createPassword() {
 
 function copyPassword() {
     if (!passwordBox.value) {
-        alert("Generate a password first");
+        showFeedback("Generate a password first", "error");
         return;
     }
     const copiedText = passwordBox.value;
@@ -51,26 +53,37 @@ function copyPassword() {
     if (navigator.clipboard) {
         navigator.clipboard.writeText(copiedText)
             .then(() => {
-                alert("Password copied to clipboard");
+                showFeedback("Password copied to clipboard", "success");
                 scheduleClipboardClear(copiedText);
             })
             .catch(err => {
                 console.error("Failed to copy:", err);
-                alert("Failed to copy password to clipboard");
+                showFeedback("Failed to copy password to clipboard", "error");
             });
         return;
     }
     try {
         if (document.execCommand("copy")) {
-            alert("Password copied to clipboard");
+            showFeedback("Password copied to clipboard", "success");
             scheduleClipboardClear(copiedText);
         } else {
-            alert("Failed to copy password to clipboard");
+            showFeedback("Failed to copy password to clipboard", "error");
         }
     } catch (err) {
         console.error("Failed to copy:", err);
-        alert("Failed to copy password to clipboard");
+        showFeedback("Failed to copy password to clipboard", "error");
     }
+}
+
+function showFeedback(message, type) {
+    clearTimeout(feedbackHideTimer);
+    feedbackEl.textContent = message;
+    feedbackEl.classList.remove("feedback--success", "feedback--error");
+    feedbackEl.classList.add(type === "success" ? "feedback--success" : "feedback--error");
+    feedbackHideTimer = setTimeout(() => {
+        feedbackEl.classList.remove("feedback--success", "feedback--error");
+        feedbackEl.textContent = "";
+    }, 3000);
 }
 
 function scheduleClipboardClear(copiedText) {

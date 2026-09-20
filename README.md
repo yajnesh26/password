@@ -110,8 +110,7 @@ Some known limitations and planned work:
 - Option to **exclude ambiguous characters** (e.g., `O`, `0`, `l`, `1`).
 - Replace native alerts with a more polished feedback UI.
 - Add automated tests.
-- Add a `.gitignore` and a `LICENSE`.
 
 ## License
 
-This project does not currently ship a license.
+This project is licensed under the [MIT License](LICENSE).

@@ -10,14 +10,14 @@
 * [x] Accessibility — Fix button color contrast
 * [x] E3 — Clipboard auto-clear
 * [x] F3 — Empty-input guard
+* [x] F5 — Fix mobile horizontal overflow
 
 ## Next Fix
 
-* [ ] F5 — Fix mobile horizontal overflow
+* [ ] Remove unused/unloaded Poppins font
 
 ## Remaining Issues
 
-* [ ] Remove unused/unloaded Poppins font
 * [ ] Add README.md
 * [ ] Add `.gitignore`
 * [ ] Add LICENSE
@@ -45,10 +45,10 @@ Never combine multiple unrelated fixes into one change.
 
 ## Current Status
 
-Completed through **#5 — E3 + F3: Clipboard auto-clear and empty-input handling**.
+Completed through **F5 — Fix mobile horizontal overflow**.
 
 The next issue to work on is:
 
-**F5 — Fix mobile horizontal overflow.**
+**Remove unused/unloaded Poppins font.**
 
 Do not automatically proceed to the next issue after completing a fix.

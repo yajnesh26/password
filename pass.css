@@ -70,6 +70,30 @@ body{
     align-items: center;
     border-radius: 5px;
 }
+.length-control{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: #fff;
+    color: #333;
+    padding: 14px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.length-control input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 8px 12px;
+    width: 90px;
+    text-align: center;
+}
+.length-control input:focus-visible{
+    outline: 3px solid #019f55;
+    outline-offset: 2px;
+}
 .copy-btn:focus-visible,
 .display input:focus-visible {
     outline: 3px solid #019f55;

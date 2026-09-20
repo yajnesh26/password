@@ -17,14 +17,14 @@
 * [x] Add LICENSE
 * [x] Improve error/feedback UI
 * [x] Address remaining global/inline-handler code-quality issues
+* [x] Consider configurable password length
 
 ## Next Fix
 
-* [ ] Consider configurable password length
+* [ ] Consider removing ambiguous characters (O/0/l/1)
 
 ## Remaining Issues
 
-* [ ] Consider removing ambiguous characters (O/0/l/1)
 * [ ] Add appropriate tests
 
 ## Workflow
@@ -45,10 +45,10 @@ Never combine multiple unrelated fixes into one change.
 
 ## Current Status
 
-Completed through **Address remaining global/inline-handler code-quality issues**.
+Completed through **Configurable password length**.
 
 The next issue to work on is:
 
-**Consider configurable password length.**
+**Consider removing ambiguous characters (O/0/l/1).**
 
 Do not automatically proceed to the next issue after completing a fix.

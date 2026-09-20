@@ -13,6 +13,7 @@
             <input type="text" id="password" placeholder="Password">
             <button type="button" id="copy-btn" class="copy-btn" aria-label="Copy password" disabled><img src="images/copy.png" alt=""></button>
         </div>
+        <label class="length-control" for="length-input">Password length<input type="number" id="length-input" min="4" max="64" step="1" value="12"></label>
         <button type="button" id="generate-btn"><img src="images/generate.png">Generate Password</button>
         <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
     </div>

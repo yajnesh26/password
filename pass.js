@@ -2,8 +2,10 @@
     const passwordBox = document.getElementById("password");
     const copyButton = document.getElementById("copy-btn");
     const generateButton = document.getElementById("generate-btn");
+    const lengthInput = document.getElementById("length-input");
     const feedbackEl = document.getElementById("feedback");
-    const passwordLength = 12;
+    const MIN_LENGTH = 4;
+    const MAX_LENGTH = 64;
     const CLIPBOARD_CLEAR_DELAY_MS = 30000;
 
     let clipboardClearTimer = null;
@@ -28,13 +30,18 @@
     }
 
     function createPassword() {
+        const enteredLength = lengthInput.valueAsNumber;
+        if (!Number.isInteger(enteredLength) || enteredLength < MIN_LENGTH || enteredLength > MAX_LENGTH) {
+            showFeedback("Password length must be between " + MIN_LENGTH + " and " + MAX_LENGTH, "error");
+            return;
+        }
         const password = [
             upperCase[getRandomIndex(upperCase.length)],
             lowerCase[getRandomIndex(lowerCase.length)],
             digits[getRandomIndex(digits.length)],
             symbol[getRandomIndex(symbol.length)]
         ];
-        while (password.length < passwordLength) {
+        while (password.length < enteredLength) {
             password.push(allChars[getRandomIndex(allChars.length)]);
         }
         for (let i = password.length - 1; i > 0; i--) {
